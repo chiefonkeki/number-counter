@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Counter</title>
+    <style> 
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f0f4ff;
+        }
+        .box {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        #counter {
+            font-size: 3em;
+            font-weight: bold;
+            color: #3b5bdb;
+            margin: 10px 0;
+        }
+        .buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+        button.active {
+            transform: scale(0.98);
+        }
+        #decreasing {
+            background: #8b4747;
+            color: white;
+        }
+        #reset {
+            background: #868e96;
+            color: white;
+        }
+        #increasing {
+            background: #406f48;
+            color: white;
+        }
+        #emoji {
+            font-size: 48px;
+            height: 56px;
+            display: block;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: scale(1);
+            margin-top: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "box">
+        <h1>My Number Counter</h1>
+        <div id="counter">0</div>
+        <div class="buttons">
+            <button id="decreasing">-</button>
+            <button id="reset">Reset</button>
+            <button id="increasing">+</button>
+        </div>
+        <span id="emoji"></span>
+    </div>
+
+    <script src="number_counter.js"></script>
+</body>
+</html>
